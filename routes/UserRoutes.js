@@ -4,7 +4,7 @@ const VerifyToken = require('../middlewares/AuthMiddleware');
 
 const UserRouter = express.Router();
 
-UserRouter.get('/', VerifyToken, UserController.getUsers);
+UserRouter.get('/', UserController.getUsers);
 UserRouter.post('/', UserController.saveUser);
 UserRouter.put('/:id', VerifyToken, UserController.updateUser);
 UserRouter.delete('/:id', VerifyToken, UserController.deleteUser);

@@ -5,6 +5,7 @@ const app = express();
 
 const UserRoutes = require('./routes/UserRoutes');
 const AuthRoutes = require('./routes/AuthRoutes');
+const PlatformRoutes = require('./routes/PlatformRoutes');
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
@@ -20,5 +21,6 @@ app.use((req, res, next) => {
 
 app.use('/api/users', UserRoutes);
 app.use('/api/auth', AuthRoutes);
+app.use('/api/platforms', PlatformRoutes);
 
 module.exports = app;
